@@ -28,16 +28,17 @@ function submitForm() {
     // localStorage.setItem('phone',phone);
     // localStorage.setItem('date & time',dateTime);
 
-    let obj = {
+    let obj_details = {
       'name': name,
-      'email' : email,
       'phone' : phone,
       'date_time' : dateTime
     };
 
-    let obj_serialized = JSON.stringify(obj);
 
-    localStorage.setItem('Object', obj_serialized);
+    let obj_serialized = JSON.stringify(obj_details);
+
+    localStorage.setItem(email, obj_serialized);
+
 }
 
 
