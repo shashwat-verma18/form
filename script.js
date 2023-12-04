@@ -23,10 +23,21 @@ function submitForm() {
     var time = document.getElementById("time").value;
     var dateTime = date+' '+time;
 
-    localStorage.setItem('name',name);
-    localStorage.setItem('email',email);
-    localStorage.setItem('phone',phone);
-    localStorage.setItem('date & time',dateTime);
+    // localStorage.setItem('name',name);
+    // localStorage.setItem('email',email);
+    // localStorage.setItem('phone',phone);
+    // localStorage.setItem('date & time',dateTime);
+
+    let obj = {
+      'name': name,
+      'email' : email,
+      'phone' : phone,
+      'date_time' : dateTime
+    };
+
+    let obj_serialized = JSON.stringify(obj);
+
+    localStorage.setItem('Object', obj_serialized);
 }
 
 
