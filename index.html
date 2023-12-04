@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            background-image: url('background-image.jpg'); 
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            align-items: top;
+            padding: 15px;
+        }
+    
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin-left: 80%;
+            width: 150%;
+            border-radius: 10px;
+            border-color: rgb(255, 174, 0);
+            display: flex;
+            flex-direction: column;
+        }
+
+        legend {
+            background-color: rgb(255, 174, 0);
+            color: white;
+            padding: 5px 10px;
+        }
+    
+        p{
+            font-size: small; 
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .dateteime{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #date , #time{
+            width: 45%;
+        }
+    
+        label {
+            margin-bottom: 8px;
+        }
+    
+        input {
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    
+        button {
+            padding: 10px;
+            background-color: rgb(255, 174, 0);
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: rgb(194, 133, 0);
+        }
+    </style>
+</head>
+<body>  
+    <div id="com">
+        <form id="myForm">
+          <fieldset class="container">
+            <legend align="center">Book a Call</legend>
+
+            <p align="center">Book a call slot and our representative will call you within 1hr of slected time.</p>
+            <hr style="">
+            <label for="firstName">Name :</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+    
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+    
+            <label for="phone">Phone :</label>
+            <input type="tel" id="phone" name="phone" placeholder="9988771234" pattern="[0-9]{10}" required>
+
+            <label for="dat">Time for Call :</label>
+            <div class="datetime">
+              <input type="date" id="date" name="date" required>
+              <input type="time" id="time" name="time" required>
+            </div>
+            <button class="btn" type="button" onclick="submitForm()">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+    </body>
+    <script src="script.js"></script>
+</body>
+</html>
